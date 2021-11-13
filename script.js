@@ -19,7 +19,12 @@ function updateRate()
 function validate()
 {
     var principal = document.getElementById("principal").value;
-    if(Number(principal) <= 0 || principal==null)
+    if(principal == null || principal == "")
+    {
+          alert('Enter a positive value');
+         document.getElementById("principal").focus();
+    }
+    if(Number(principal) <= 0)
      {
          alert('Enter a positive value');
          document.getElementById("principal").focus();
