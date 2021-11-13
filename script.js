@@ -16,3 +16,12 @@ function updateRate()
     document.getElementById("rate_val").innerText=rateval;
 }
         
+function validate()
+{
+    var principal = document.getElementById("principal").value;
+    if(Number(principal) <= 0)
+     {
+         alert('Enter a positive value');
+         document.getElementById("principal").focus();
+     }
+}
